@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import { Container, Box } from "@mui/material";
+import Header from "./components/Header";
+import Objective from "./components/Objective";
+import Education from "./components/Education";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Certifications from "./components/Certifications";
+import Strengths from "./components/Strengths";
+import ResumeDownload from "./components/ResumeDownload";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Container maxWidth="md" sx={{ fontFamily: "Roboto, sans-serif", padding: "20px" }}>
+    <Box sx={{ textAlign: "center", mb: 4 }}>
+      <Header />
+    </Box>
+    <Objective />
+    <Education />
+    <Skills />
+    <Projects />
+    <Certifications />
+    <Strengths />
+    <ResumeDownload />
+  </Container>
+);
 
 export default App;
